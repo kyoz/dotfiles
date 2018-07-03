@@ -1,0 +1,22 @@
+{
+    "git.ignoreMissingGitWarning": true,
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.colorTheme": "One Monokai",
+    "editor.fontFamily": "'PragmataPro', 'monospace', 'Droid Sans Fallback'",
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "boundary",
+    "editor.minimap.enabled": false,
+    "editor.rulers": [
+        100
+    ],
+    "editor.quickSuggestions": {
+        "other": true,
+        "comments": true,
+        "strings": true 
+    },
+    "vim.easymotion": true,
+    "vim.easymotionMarkerBackgroundColor": "#d8ab2f",
+    "vim.easymotionMarkerFontFamily": "'PragmataPro', 'monospace",
+    "vim.easymotionMarkerForegroundColorOneChar": "#303030",
+    "vim.easymotionMarkerForegroundColorTwoChar": "#303030"
+}
