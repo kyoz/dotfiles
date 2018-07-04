@@ -1,34 +1,63 @@
+#!/bin/bash
+set -e pipefail
+
 # Auto update dotfiles
 
 # Utils scripts
 . ./scripts/utils.sh
 
 # Dotfiles paths
+BASH_ALIASES_PATH=~/.bash_aliases
 BASH_PROFILE_PATH=~/.bash_profile
 GIT_CONFIG_PATH=~/.gitconfig
 ZSH_PATH=~/.zshrc
+VSCODE_PATH_OSX="$HOME/Library/Application Support/Code/User/"
+VSCODE_PATH_LINUX="$HOME/.config/Code/User/"
+VSCODE_PATH_WINDOW="%APPDATA%\\Code\\User\\"
 
-# Update .bash_profile
-if [ $(is_file_exist $BASH_PROFILE_PATH) -eq "1" ]; then
-  echo "Updated .bash_profile"
-  cp .bash_profile $BASH_PROFILE_PATH
-else
-  echo "Not exist .bash_profile. Can't update !" 
-fi
+{
+  cp .bash_aliases $BASH_ALIASES_PATH && log "Updated .bash_aliases"
+} || {
+  error "Can't update .bash_aliases"
+}
 
-# Update .gitconfig
-if [ $(is_file_exist $GIT_CONFIG_PATH) -eq "1" ]; then
-  echo "Updated .gitconfig"
-  cp .gitconfig $GIT_CONFIG_PATH
-else
-  echo "Not exist .bash_profile. Can't update !" 
-fi
+{
+  cp .bash_profile $BASH_PROFILE_PATH && log "Updated .bash_profile"
+} || {
+  error "Can't update .bash_profile"
+}
 
-# Update .zshrc
-if [ $(is_file_exist $ZSH_PATH) -eq "1" ]; then
-  echo "Updated .zshrc"
-  cp .zshrc $ZSH_PATH
-else
-  echo "Not exist .zsh. Can't update !" 
-fi
+{
+  cp .gitconfig $GIT_CONFIG_PATH && log "Updated .gitconfig"
+} || {
+  error "Can't update .gitconfig"
+}
 
+{
+  cp .zshrc $ZSH_PATH && log "Updated .zshrc"
+} || {
+  error "Can't update .zshrc"
+}
+
+{
+  if [ "$(uname)" == "Darwin" ]; then
+    # Do something under Mac OS X platform        
+    VSCODE_PATH=$VSCODE_PATH_OSX
+  elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
+      # Do something under GNU/Linux platform
+    VSCODE_PATH=$VSCODE_PATH_LINUX
+  elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
+      # Do something under 32 bits Windows NT platform
+    VSCODE_PATH=$VSCODE_PATH_WINDOW
+  elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
+      # Do something under 64 bits Windows NT platform
+    VSCODE_PATH=$VSCODE_PATH_WINDOW
+  fi
+
+  cp ./configs/vscode/settings.json "${VSCODE_PATH}settings.json" &&
+  cp ./configs/vscode/keybindings.json "${VSCODE_PATH}keybindings.json" &&
+  log "Updated vscode settings"
+
+} || {
+  error "Can't update vscode settings"
+}
