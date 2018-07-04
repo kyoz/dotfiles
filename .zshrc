@@ -1,4 +1,5 @@
-# If you come from bash you might have to change your $PATH.
+# Remember to restart after install zsh & oh-my-zsh
+
 # Path to your oh-my-zsh installation.
 export ZSH=$HOME/.oh-my-zsh
 

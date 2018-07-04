@@ -1,7 +1,7 @@
 # Auto update dotfiles
 
 # Utils scripts
-. ./scripts/utils
+. ./scripts/utils.sh
 
 # Dotfiles paths
 BASH_PROFILE_PATH=~/.bash_profile
@@ -18,7 +18,7 @@ fi
 
 # Update .gitconfig
 if [ $(is_file_exist $GIT_CONFIG_PATH) -eq "1" ]; then
-  echo "Updated .bash_profile"
+  echo "Updated .gitconfig"
   cp .gitconfig $GIT_CONFIG_PATH
 else
   echo "Not exist .bash_profile. Can't update !" 

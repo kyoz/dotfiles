@@ -1,8 +1,8 @@
 export TERM=xterm-256color
 
-#if you use oh-my-zsh, remember to put 'source ~/.bash_profile' at the end of .zshrc
+# if you use oh-my-zsh, remember to put 'source ~/.bash_profile' at the end of .zshrc
 
-# aliases 
+# aliases
 alias cl="clear";
 alias sb="source ~/.bash_profile";
 alias vb="vim ~/.bash_profile";
@@ -32,6 +32,7 @@ alias gl="git lg";
 alias nck="npm-check-updates";
 alias nlg="npm list -g --depth=0";
 alias ni="npm install";
+alias ns="npm start";
 alias nu="npm uninstall $1";
 alias nug="npm uninstall -g $1";
 function nv { npm view "$1" version; }
