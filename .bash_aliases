@@ -30,8 +30,9 @@ alias gl="git lg";
 alias nck="npm-check-updates";
 alias nlg="npm list -g --depth=0";
 alias ni="npm install";
-alias ns="npm start";
+alias nig="npm install -g $1";
 alias nu="npm uninstall $1";
 alias nug="npm uninstall -g $1";
+alias ns="npm start";
 function nv { npm view "$1" version; }
 function nvs { npm view "$1" versions; }

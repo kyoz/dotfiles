@@ -1,13 +1,12 @@
 #!/bin/bash
 set -e pipefail
 
-# Auto update dotfiles
-
 # Utils scripts
-. ./scripts/utils.sh
+. ./.bash_functions
 
 # Dotfiles paths
 BASH_ALIASES_PATH=~/.bash_aliases
+BASH_FUNCTIONS_PATH=~/.bash_functions
 BASH_PROFILE_PATH=~/.bash_profile
 GIT_CONFIG_PATH=~/.gitconfig
 ZSH_PATH=~/.zshrc
@@ -19,6 +18,12 @@ VSCODE_PATH_WINDOW="%APPDATA%\\Code\\User\\"
   cp .bash_aliases $BASH_ALIASES_PATH && log "Updated .bash_aliases"
 } || {
   error "Can't update .bash_aliases"
+}
+
+{
+  cp .bash_functions $BASH_FUNCTIONS_PATH && log "Updated .bash_functions"
+} || {
+  error "Can't update .bash_functions"
 }
 
 {
@@ -61,3 +66,6 @@ VSCODE_PATH_WINDOW="%APPDATA%\\Code\\User\\"
 } || {
   error "Can't update vscode settings"
 }
+
+#existPkg="$(is_package_installed angular)"
+#echo $existPkg
