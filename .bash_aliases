@@ -2,7 +2,6 @@
 alias cl="clear";
 alias sb="source ~/.bash_profile";
 alias vb="vim ~/.bash_profile";
-alias delDSF="find . -name '.DS_Store' -type f -delete";
 alias d="cd ~/Documents";
 alias gh="cd ~/Documents/Github";
 alias pj="cd ~/Documents/Projects"
@@ -25,11 +24,15 @@ alias gf="git fetch";
 alias gpush="git push";
 alias gd="git diff";
 alias gl="git lg";
+alias gco="git co $1";
+alias gbr="git br -va";
+alias grmt="git remote -v";
 
 # npm aliases
 alias nck="npm-check-updates";
 alias nlg="npm list -g --depth=0";
 alias ni="npm install";
+alias nis="npm install --save $1";
 alias nig="npm install -g $1";
 alias nu="npm uninstall $1";
 alias nug="npm uninstall -g $1";
