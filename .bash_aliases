@@ -28,6 +28,7 @@ alias gl="git lg";
 alias gco="git co $1";
 alias gbr="git br -va";
 alias grmt="git remote -v";
+alias gt="git tag";
 
 # npm aliases
 alias nck="npm-check-updates";
