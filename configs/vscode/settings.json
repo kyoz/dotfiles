@@ -18,5 +18,6 @@
     "vim.easymotionMarkerBackgroundColor": "#d8ab2f",
     "vim.easymotionMarkerFontFamily": "'PragmataPro', 'monospace",
     "vim.easymotionMarkerForegroundColorOneChar": "#303030",
-    "vim.easymotionMarkerForegroundColorTwoChar": "#303030"
+    "vim.easymotionMarkerForegroundColorTwoChar": "#303030",
+    "xo.enable": true
 }
