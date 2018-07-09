@@ -47,5 +47,6 @@ alias nt="npm test";
 alias ndr="npm config set registry https://registry.npmjs.org/";
 alias np="npm publish";
 alias nup="npm unpublish $1";
+alias nls="ls -al $(npm root -g)"; # View all syslink
 function nv { npm view "$1" version; }
 function nvs { npm view "$1" versions; }
