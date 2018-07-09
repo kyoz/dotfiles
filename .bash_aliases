@@ -29,6 +29,9 @@ alias gco="git co $1";
 alias gbr="git br -va";
 alias grmt="git remote -v";
 alias gt="git tag";
+function gat { git tag -a "$1" -m "$2"};
+alias gtpush="git push origin $1";
+alias gtdel="git tag -d $1 && git push --delete origin $1";
 
 # npm aliases
 alias nck="npm-check-updates";
@@ -41,5 +44,8 @@ alias nu="npm uninstall $1";
 alias nug="npm uninstall -g $1";
 alias ns="npm start";
 alias nt="npm test";
+alias ndr="npm config set registry https://registry.npmjs.org/";
+alias np="npm publish";
+alias nup="npm unpublish $1";
 function nv { npm view "$1" version; }
 function nvs { npm view "$1" versions; }
