@@ -8,6 +8,7 @@ alias pj="cd ~/Documents/Projects"
 alias dt="cd ~/Desktop";
 alias rmf="rm -rf $1";
 alias ds="du -sh $1"; # Directory size
+function mkd { mkdir $1 && cd $1 };
 
 # code aliases
 alias c="code .";
@@ -47,6 +48,6 @@ alias nt="npm test";
 alias ndr="npm config set registry https://registry.npmjs.org/";
 alias np="npm publish";
 alias nup="npm unpublish $1";
-alias nls="ls -al $(npm root -g)"; # View all syslink
-function nv { npm view "$1" version; }
-function nvs { npm view "$1" versions; }
+function nsl { ls -al $(npm root -g); }; # View all syslink
+function nv { npm view "$1" version; };
+function nvs { npm view "$1" versions; };
