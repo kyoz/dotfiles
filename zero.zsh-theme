@@ -18,7 +18,8 @@ RPS1="%B${return_code}%b"
 
 ZSH_THEME_GIT_PROMPT_PREFIX="%{$FG[123]%} ⇢ "
 ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
-
+ZSH_THEME_GIT_PROMPT_DIRTY=" %{$FG[009]%}!%{$reset_color%}"
+ZSH_THEME_GIT_PROMPT_CLEAN=" %{$FG[048]%}√%{$reset_color%}"
 # To have padding in gnome terminal (ubuntu), create
 # ~/.config/gtk-3.0/gtk.css
 
@@ -34,3 +35,4 @@ ZSH_THEME_GIT_PROMPT_SUFFIX="%{$reset_color%}"
 # Refs
 # https://misc.flogisoft.com/bash/tip_colors_and_formatting
 # https://textart4u.blogspot.com/2013/03/one-line-ascii-text-art.html
+#282A36

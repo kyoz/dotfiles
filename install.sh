@@ -10,7 +10,7 @@ BASH_FUNCTIONS_PATH=~/.bash_functions
 BASH_PROFILE_PATH=~/.bash_profile
 GIT_CONFIG_PATH=~/.gitconfig
 ZSH_PATH=~/.zshrc
-ZSH_THEME_PATH=~/.oh-my-zsh/themes/kyoz.zsh-theme
+ZSH_THEME_PATH=~/.oh-my-zsh/themes/zero.zsh-theme
 VSCODE_PATH_OSX="$HOME/Library/Application Support/Code/User/"
 VSCODE_PATH_LINUX="$HOME/.config/Code/User/"
 VSCODE_PATH_WINDOW="%APPDATA%\\Code\\User\\"
@@ -46,7 +46,7 @@ VSCODE_PATH_WINDOW="%APPDATA%\\Code\\User\\"
 }
 
 {
-  cp kyoz.zsh-theme $ZSH_THEME_PATH && log "Updated zsh theme"
+  cp zero.zsh-theme $ZSH_THEME_PATH && log "Updated zsh theme"
 } || {
   error "Can't update zsh theme"
 }
