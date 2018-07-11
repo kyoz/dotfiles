@@ -10,11 +10,11 @@ WHITE=7
 
 # make text have cool color 
 function log {
-  tput setaf $GREEN; echo -e $1 "✔";
+  tput setaf $GREEN; echo -e "✔ " $1;
 }
 
 function error {
-  tput setaf $RED; echo -e $1 "✘"
+  tput setaf $RED; echo -e "✘" $1;
 }
 
 

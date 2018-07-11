@@ -98,3 +98,6 @@ source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 source ~/.bash_profile
+
+# Clean the terminal
+cl
