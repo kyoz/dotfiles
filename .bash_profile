@@ -2,7 +2,6 @@
 export TERM=xterm-256color
 
 # aliases
-
 source ~/.bash_aliases
 
 # nvm

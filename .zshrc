@@ -6,7 +6,7 @@ export ZSH=$HOME/.oh-my-zsh
 # Set name of the theme to load. Optionally, if you set this to "random"
 # it'll load a random theme each time that oh-my-zsh is loaded.
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
-ZSH_THEME="bira"
+ZSH_THEME="kyoz"
 
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
@@ -91,6 +91,10 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Zsh Syntax Highlighting
+[ ! -d ~/zsh-syntax-highlighting ] && echo "Install zsh syntax highlighting" && git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/zsh-syntax-highlighting
+source ~/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 
 source ~/.bash_profile
