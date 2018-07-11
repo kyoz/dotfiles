@@ -1,4 +1,5 @@
 # aliases
+alias c="cd"
 alias cl="clear";
 alias sb="source ~/.bash_profile";
 alias vb="vim ~/.bash_profile";
@@ -11,7 +12,7 @@ alias ds="du -sh $1"; # Directory size
 function mkd { mkdir $1 && cd $1 };
 
 # code aliases
-alias c="code .";
+alias code="code .";
 alias cr="code . -r";
 
 # utils aliases
@@ -45,6 +46,7 @@ alias nu="npm uninstall $1";
 alias nug="npm uninstall -g $1";
 alias ns="npm start";
 alias nt="npm test";
+alias nlr="npm config list registry"
 alias ndr="npm config set registry https://registry.npmjs.org/";
 alias np="npm publish";
 alias nup="npm unpublish $1";
