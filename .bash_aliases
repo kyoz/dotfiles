@@ -21,6 +21,7 @@ alias pg="echo 'Pinging Google' && ping www.google.com";
 # git aliases
 alias ga="git add .";
 alias gc="git commit -m $1";
+alias gcl="git clone $1";
 alias gs="git status";
 alias gp="git pull";
 alias gf="git fetch";
