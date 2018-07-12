@@ -23,6 +23,10 @@ dotfiles to configurating my working enviroment :cat:
 
 Execute `install.sh` to automatically update dotfiles & configs
 
+## Related
+
+* [Purify Theme](https://github.com/banminkyoz/purify)
+
 ## Lisence
 
 MIT © [Kyoz](mailto:banminkyoz@gmail.com)
