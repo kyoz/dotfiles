@@ -1,0 +1,14 @@
+{
+	"Add quote": {
+		"scope": "json",
+		"prefix": "addQuote",
+		"body": [
+		"{",
+			"\"quotes\": \"$1\",",
+			"\"author\": \"$2\",",
+			"\"category\": \"$3\"",
+		"}"
+		],
+		"description": "Add quote for iquotes"
+	}
+}

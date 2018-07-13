@@ -17,7 +17,7 @@ dotfiles to configurating my working enviroment :cat:
 
 | Folder          | Description                                                               |
 |:--------------- |:--------------------------------------------------------------------------|
-| vscode          | Settings & Keybindings for VSCode                                         |
+| vscode          | Settings & Keybindings & Snippets for VSCode                                         |
 
 ## Usage
 
