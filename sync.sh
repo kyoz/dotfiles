@@ -52,7 +52,7 @@ log "\nSync config from your PC to this project...\n"
 
 {
   rm -rf ./configs/vscode/snippets && mkdir ./configs/vscode/snippets &&
-  cp -R  "${VSCODE_PATH}/snippets/." && ./configs/vscode/snippets/
+  cp -R  "${VSCODE_PATH}/snippets/." ./configs/vscode/snippets/ &&
   log_success "Synced vscode snippets"
 } || {
   log_error "Can't sync vscode snippets"

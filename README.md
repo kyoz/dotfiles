@@ -1,6 +1,10 @@
 # Kyoz's dotfiles
 dotfiles to configurating my working enviroment :cat:
 
+<p align="center">
+  <img src="demo.png">
+</p>
+
 ## Dotfiles
 
 | File                 | Description                                                               |
@@ -21,7 +25,8 @@ dotfiles to configurating my working enviroment :cat:
 
 ## Usage
 
-Execute `install.sh` to automatically update dotfiles & configs
+* `install.sh` - Execute to automatically update dotfiles & configs to your PC
+* `sync.sh` - Execute to sync dotfiles & configs from your PC to this project
 
 ## Related
 
