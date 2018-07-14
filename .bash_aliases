@@ -49,7 +49,6 @@ alias ns="npm start";
 alias nt="npm test";
 alias nlr="npm config list registry"
 alias ndr="npm config set registry https://registry.npmjs.org/";
-alias np="npm publish";
 alias nup="npm unpublish $1";
 function nsl { ls -al $(npm root -g); }; # View all syslink
 function nv { npm view "$1" version; };
