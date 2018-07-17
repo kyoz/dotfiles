@@ -101,3 +101,6 @@ source ~/.bash_profile
 
 # Clean the terminal
 cl
+
+# print random quote from iquotes
+iquotes
