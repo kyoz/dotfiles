@@ -15,6 +15,7 @@ BASH_PROFILE_PATH=~/.bash_profile
 GIT_CONFIG_PATH=~/.gitconfig
 ZSH_PATH=~/.zshrc
 ZSH_THEME_PATH=~/.oh-my-zsh/themes/purify.zsh-theme
+HYPER_PATH=~/.hyper.js
 VSCODE_PATH="";
 VSCODE_PATH_OSX="$HOME/Library/Application Support/Code/User"
 VSCODE_PATH_LINUX="$HOME/.config/Code/User"

@@ -2,7 +2,7 @@
 dotfiles to configurating my working enviroment :cat:
 
 <p align="center">
-  <img src="demo.png">
+  <img src="banner.png" width="700">
 </p>
 
 ## Dotfiles
@@ -13,6 +13,7 @@ dotfiles to configurating my working enviroment :cat:
 | .bash_functions      | Some helpful functions                                                    |
 | .bash_profile        | Config system aliases, git aliases, nvm...                                |
 | .gitconfig           | Config infomation, aliases for git                                        |
+| .hyper.js            | Hyper configuration                                                       |
 | .zshrc               | Config for oh-my-zsh                                                      |
 | purify.zsh-theme     | [Purify theme](https://github.com/banminkyoz/purify) for oh-my-zsh        |
 | purify.itermcolors   | Iterm2 colorscheme                                                        |

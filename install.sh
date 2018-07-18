@@ -43,6 +43,12 @@ log "\nUpdating config to your PC...\n"
 }
 
 {
+  cp .hyper.js $HYPER_PATH && log_success "Updated .hyper.js"
+} || {
+  log_error "Can't update .hyper.js"
+}
+
+{
   cp ./configs/vscode/settings.json "${VSCODE_PATH}/settings.json" &&
   cp ./configs/vscode/keybindings.json "${VSCODE_PATH}/keybindings.json" &&
   log_success "Updated vscode settings"

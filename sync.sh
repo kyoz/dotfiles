@@ -43,6 +43,12 @@ log "\nSync config from your PC to this project...\n"
 }
 
 {
+  cp $HYPER_PATH .hyper.js && log_success "Synced .hyper.js"
+} || {
+  log_error "Can't sync .hyper.js"
+}
+
+{
   cp "${VSCODE_PATH}/settings.json" ./configs/vscode/settings.json &&
   cp "${VSCODE_PATH}/keybindings.json" ./configs/vscode/keybindings.json &&
   log_success "Sync vscode settings"
