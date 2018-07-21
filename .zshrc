@@ -103,4 +103,4 @@ source ~/.bash_profile
 cl
 
 # print random quote from iquotes
-iquotes
+quote
