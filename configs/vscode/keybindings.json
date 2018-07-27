@@ -32,5 +32,10 @@
         "key": "ctrl+k v",
         "command": "-markdown.showPreviewToSide",
         "when": "editorLangId == 'markdown'"
+    },
+    {
+        "key": "ctrl+f",
+        "command": "-extension.vim_ctrl+f",
+        "when": "editorTextFocus && vim.active && vim.use<C-f> && !inDebugRepl"
     }
 ]
