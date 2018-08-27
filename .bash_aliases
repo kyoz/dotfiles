@@ -1,22 +1,23 @@
 # aliases
 alias c="cd"
 alias cl="clear";
-alias sb="source ~/.bash_profile";
-alias vb="vim ~/.bash_profile";
-alias d="cd ~/Documents";
-alias gh="cd ~/Documents/Github";
-alias pj="cd ~/Documents/Projects"
-alias dt="cd ~/Desktop";
-alias rmf="rm -rf $1";
+alias sb="source ~/.bash_profile"; # Apply .bash_profile changes
+alias vb="vim ~/.bash_profile"; # Open edit .bash_profile
+alias d="cd ~/Documents"; # Go to Document folder
+alias gh="cd ~/Documents/Github"; # Go to Github folder
+alias pj="cd ~/Documents/Projects" # Go to Project folder
+alias dt="cd ~/Desktop"; # Go to Desktop
+alias rmf="rm -rf $1"; # Delete folder and everything inside it
 alias ds="du -sh $1"; # Directory size
-function mkd { mkdir $1 && cd $1 };
+function mkd { mkdir $1 && cd $1 }; # Make dir and jump to created folder
 
 # code aliases
 alias code="code .";
 alias cr="code . -r";
 
 # utils aliases
-alias pg="echo 'Pinging Google' && ping www.google.com";
+alias pg="echo 'Pinging Google' && ping www.google.com"; # Ping Google
+function lip { ip route get 8.8.8.8 | awk '{print $NF; exit}' }; # Local IP
 
 # git aliases
 alias ga="git add .";
