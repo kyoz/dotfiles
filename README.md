@@ -10,7 +10,7 @@ dotfiles to configurating my working enviroment :cat:
 | File                 | Description                                                               |
 |:---------------------|:--------------------------------------------------------------------------|
 | .bash_aliases        | Aliases for my most used commands                                         |
-| .bash_functions      | Some helpful functions                                                    |
+| .bash_utils          | Some helpful utils functions                                              |
 | .bash_profile        | Config system aliases, git aliases, nvm...                                |
 | .gitconfig           | Config infomation, aliases for git                                        |
 | .hyper.js            | Hyper configuration                                                       |

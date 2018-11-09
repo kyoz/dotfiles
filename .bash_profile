@@ -1,7 +1,7 @@
 # if you use oh-my-zsh, remember to put 'source ~/.bash_profile' at the end of .zshrc
 export TERM=xterm-256color
 
-# aliases
+# Source Aliases
 source ~/.bash_aliases
 
 # nvm

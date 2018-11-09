@@ -2,7 +2,7 @@
 set -e pipefail
 
 # Utils scripts
-. ./.bash_functions
+. ./.bash_utils
 
 log "\nSync config from your PC to this project...\n"
 
@@ -13,9 +13,9 @@ log "\nSync config from your PC to this project...\n"
 }
 
 {
-  cp $BASH_FUNCTIONS_PATH .bash_functions && log_success "Synced .bash_functions"
+  cp $BASH_UTILS_PATH .bash_utils && log_success "Synced .bash_utils"
 } || {
-  log_error "Can't sync .bash_functions"
+  log_error "Can't sync .bash_utils"
 }
 
 {

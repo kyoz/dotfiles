@@ -2,7 +2,7 @@
 set -e pipefail
 
 # Utils scripts
-. ./.bash_functions
+. ./.bash_utils
 
 log "\nUpdating config to your PC...\n"
 
@@ -13,9 +13,9 @@ log "\nUpdating config to your PC...\n"
 }
 
 {
-  cp .bash_functions $BASH_FUNCTIONS_PATH && log_success "Updated .bash_functions"
+  cp .bash_utils $BASH_UTILS_PATH && log_success "Updated .bash_utils"
 } || {
-  log_error "Can't update .bash_functions"
+  log_error "Can't update .bash_utils"
 }
 
 {
