@@ -24,4 +24,7 @@
     "vim.easymotionMarkerForegroundColorTwoChar": "#303030",
     "xo.enable": true,
     "materialTheme.fixIconsRunning": false,
+    "explorer.confirmDelete": false,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "terminal.integrated.rendererType": "dom",
 }
