@@ -37,15 +37,21 @@ log "\nUpdating config to your PC...\n"
 }
 
 {
-  cp purify.zsh-theme $ZSH_THEME_PATH && log_success "Updated zsh theme"
+  cp .tmux.conf $TMUX_PATH && log_success "Updated .tmux.conf"
 } || {
-  log_error "Can't update zsh theme"
+  log_error "Can't update .tmux.conf"
 }
 
 {
   cp .hyper.js $HYPER_PATH && log_success "Updated .hyper.js"
 } || {
   log_error "Can't update .hyper.js"
+}
+
+{
+  cp purify.zsh-theme $ZSH_THEME_PATH && log_success "Updated zsh theme"
+} || {
+  log_error "Can't update zsh theme"
 }
 
 {

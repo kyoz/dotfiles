@@ -37,15 +37,21 @@ log "\nSync config from your PC to this project...\n"
 }
 
 {
-  cp $ZSH_THEME_PATH purify.zsh-theme && log_success "Synced zsh theme"
+  cp $TMUX_PATH .tmux.conf && log_success "Synced .tmux.conf"
 } || {
-  log_error "Can't sync zsh theme"
+  log_error "Can't sync .tmux.conf"
 }
 
 {
   cp $HYPER_PATH .hyper.js && log_success "Synced .hyper.js"
 } || {
   log_error "Can't sync .hyper.js"
+}
+
+{
+  cp $ZSH_THEME_PATH purify.zsh-theme && log_success "Synced zsh theme"
+} || {
+  log_error "Can't sync zsh theme"
 }
 
 {
