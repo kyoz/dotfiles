@@ -8,6 +8,11 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="purify"
 
+# tmux
+if [ -z "$TMUX" ]; then
+    tmux attach -t Kyoz || tmux -u new -s Kyoz
+fi
+
 # Set list of themes to load
 # Setting this variable when ZSH_THEME=random
 # cause zsh load theme from this variable instead of
@@ -58,16 +63,10 @@ ZSH_THEME="purify"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
-  git,
-  tmux
+  git
 )
 
-# Plugin configuration
-ZSH_TMUX_AUTOSTART=true
-
 source $ZSH/oh-my-zsh.sh
-
-# User configuration
 
 # export MANPATH="/usr/local/man:$MANPATH"
 
