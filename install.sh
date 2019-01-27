@@ -43,6 +43,12 @@ log "\nUpdating config to your PC...\n"
 }
 
 {
+  cp .alacritty.yml $ALACRITTY_PATH && log_success "Updated .alacritty.yml"
+} || {
+  log_error "Can't update .alacritty.yml"
+}
+
+{
   cp .hyper.js $HYPER_PATH && log_success "Updated .hyper.js"
 } || {
   log_error "Can't update .hyper.js"

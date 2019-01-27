@@ -43,6 +43,12 @@ log "\nSync config from your PC to this project...\n"
 }
 
 {
+  cp $ALACRITTY_PATH .alacritty.yml && log_success "Synced .alacritty.yml"
+} || {
+  log_error "Can't sync .alacritty.yml"
+}
+
+{
   cp $HYPER_PATH .hyper.js && log_success "Synced .hyper.js"
 } || {
   log_error "Can't sync .hyper.js"

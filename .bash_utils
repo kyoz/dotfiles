@@ -16,6 +16,7 @@ GIT_CONFIG_PATH=~/.gitconfig
 ZSH_PATH=~/.zshrc
 TMUX_PATH=~/.tmux.conf
 ZSH_THEME_PATH=~/.oh-my-zsh/themes/purify.zsh-theme
+ALACRITTY_PATH=~/.config/alacritty/alacritty.yml
 HYPER_PATH=~/.hyper.js
 VSCODE_PATH=""
 VSCODE_PATH_OSX="$HOME/Library/Application Support/Code/User"
