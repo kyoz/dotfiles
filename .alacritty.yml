@@ -17,8 +17,8 @@ window:
   # Window dimensions in character columns and lines
   # (changes require restart)
   dimensions:
-    columns: 200 
-    lines: 40 
+    columns: 130
+    lines: 30
 
   # Adds this many blank pixels of padding around the window
   # Units are physical pixels; this is not DPI aware.
@@ -88,12 +88,12 @@ font:
     # style: Italic
 
   # Point size of the font
-  size: 15.0
+  size: 12.0
 
   # Offset is the extra space around each character. offset.y can be thought of
   # as modifying the linespacing, and offset.x as modifying the letter spacing.
   offset:
-    x: -1 
+    x: -1
     y: 0
 
   # Glyph offset determines the locations of the glyphs within their cells with
@@ -310,6 +310,8 @@ shell:
 key_bindings:
   - { key: V,        mods: Command, action: Paste                        }
   - { key: C,        mods: Command, action: Copy                         }
+  - { key: V,        mods: Control|Shift, action: Paste                  }
+  - { key: C,        mods: Control|Shift, action: Copy                   }
   - { key: Paste,                   action: Paste                        }
   - { key: Copy,                    action: Copy                         }
   - { key: H,        mods: Command, action: Hide                         }
@@ -417,5 +419,5 @@ key_bindings:
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
 # Scrollback  
-  - { key: J,        mods: Control,   action: ScrollPageUp   }
-  - { key: K,        mods: Control,   action: ScrollPageDown }
+  - { key: J,        mods: Control,   action: ScrollPageUp               }
+  - { key: K,        mods: Control,   action: ScrollPageDown             }

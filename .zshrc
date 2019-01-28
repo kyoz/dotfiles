@@ -8,8 +8,22 @@ export ZSH=$HOME/.oh-my-zsh
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 ZSH_THEME="purify"
 
-# tmux
-if [ -z "$TMUX" ]; then
+# TMUX (Just open tmux on alacritty terminal, cause i don't want to use it in vscode's terminal or other terminals)
+
+TERMINAL_NAME=$(
+  ps -o comm= -p "$((
+                  $(
+                    ps -o ppid= -p "$((
+                                      $(
+                                        ps -o sid= -p "$$"
+                                      )
+                                    ))"
+                  )
+                ))"
+)
+
+if [ -z "$TMUX" ] && [ "$TERMINAL_NAME" = "alacritty" ]
+then
     tmux attach -t Kyoz || tmux -u new -s Kyoz
 fi
 

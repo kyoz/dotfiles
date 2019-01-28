@@ -4,7 +4,7 @@ alias cl="clear";
 alias sb="source ~/.bash_profile"; # Apply .bash_profile changes
 alias vb="vim ~/.bash_profile"; # Open edit .bash_profile
 alias dt="cd ~/Desktop"; # Go to Desktop
-alias dt="cd ~/Downloads"; # Go to Downloads
+alias dl="cd ~/Downloads"; # Go to Downloads
 alias d="cd ~/Documents"; # Go to Document folder
 alias gh="cd ~/Documents/Github"; # Go to Github folder
 alias pj="cd ~/Documents/Projects" # Go to Project folder
@@ -45,9 +45,9 @@ alias nug="npm uninstall -g $1";
 alias ns="npm start";
 alias nt="npm test";
 alias nlr="npm config list registry"
-alias ndr="npm config set registry https://registry.npmjs.org/";
+alias nsdr="npm config set registry https://registry.npmjs.org/";
 alias nup="npm unpublish $1";
-function vsl { ls -al $(npm root -g); }; # View all syslink
+function vasl { ls -al $(npm root -g); }; # View all syslink
 function nv { npm view "$1" version; };
 function nvs { npm view "$1" versions; };
 
