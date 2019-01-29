@@ -2,7 +2,6 @@
 alias c="cd"
 alias cl="clear";
 alias sb="source ~/.bash_profile"; # Apply .bash_profile changes
-alias st="tmux source ~/.tmux.conf"; # Apply .tmux.conf changes
 alias vb="vim ~/.bash_profile"; # Open edit .bash_profile
 alias dt="cd ~/Desktop"; # Go to Desktop
 alias dl="cd ~/Downloads"; # Go to Downloads
