@@ -25,7 +25,7 @@ window:
   # (change requires restart)
   padding:
     x: 0
-    y: 0 
+    y: 0
 
   # Window decorations
   # Setting this to false will result in window without borders and title bar.
@@ -71,19 +71,20 @@ draw_bold_text_with_bright_colors: true
 font:
   # The normal (roman) font face to use.
   normal:
-    family: Iosevka 
+    family: Iosevka
     # Style can be specified to pick a specific face.
     # style: Regular
 
   # The bold font face
   bold:
-    family: Iosevka 
+    family: Iosevka
+    style: Regular
     # Style can be specified to pick a specific face.
     # style: Bold
 
   # The italic font face
   italic:
-    family: Iosevka 
+    family: Iosevka
     # Style can be specified to pick a specific face.
     # style: Italic
 
@@ -105,7 +106,7 @@ font:
 
   # Scale the font size based on the monitor's DPI. This will lead to bigger text on HiDPI
   # screens and make reading text a little easier.
-  scale_with_dpi: true
+  scale_with_dpi: false
 
   # OS X only: use thin stroke font rendering. Thin strokes are suitable
   # for retina displays, but for non-retina you probably want this set to
@@ -142,24 +143,32 @@ colors:
 
   # Normal colors
   normal:
-    black:   '0x000000'
-    red:     '0xd54e53'
-    green:   '0xb9ca4a'
-    yellow:  '0xe6c547'
-    blue:    '0x7aa6da'
-    magenta: '0xc397d8'
-    cyan:    '0x70c0ba'
+    # black:   '0x000000'
+    # red:     '0xC51E14'
+    # green:   '0x1DC121'
+    # yellow:  '0xC7C329'
+    # blue:    '0x0A2FC4'
+    # magenta: '0xC839C5'
+    # cyan:    '0x20C5C6'
+    # white:   '0xC7C7C7'
+    black:   '0x686868'
+    red:     '0xFD6F6B'
+    green:   '0x67F86F'
+    yellow:  '0xFFFA72'
+    blue:    '0x6dbdff'
+    magenta: '0xFD7CFC'
+    cyan:    '0x68FDFE'
     white:   '0xffffff'
 
   # Bright colors
   bright:
-    black:   '0x666666'
-    red:     '0xff3334'
-    green:   '0x9ec400'
-    yellow:  '0xe7c547'
-    blue:    '0x7aa6da'
-    magenta: '0xb77ee0'
-    cyan:    '0x54ced6'
+    black:   '0x686868'
+    red:     '0xFD6F6B'
+    green:   '0x67F86F'
+    yellow:  '0xFFFA72'
+    blue:    '0x6dbdff'
+    magenta: '0xFD7CFC'
+    cyan:    '0x68FDFE'
     white:   '0xffffff'
 
   # Dim colors (Optional)
@@ -168,7 +177,7 @@ colors:
     red:     '0xf2777a'
     green:   '0x99cc99'
     yellow:  '0xffcc66'
-    blue:    '0x6699cc'
+    blue:    '0x6dbdff'
     magenta: '0xcc99cc'
     cyan:    '0x66cccc'
     white:   '0xdddddd'
@@ -418,6 +427,6 @@ key_bindings:
   - { key: F11,      mods: Command, chars: "\x1b[23;3~"                  }
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
-# Scrollback  
+# Scrollback
   - { key: J,        mods: Control,   action: ScrollPageUp               }
   - { key: K,        mods: Control,   action: ScrollPageDown             }
