@@ -51,6 +51,9 @@ function vasl { ls -al $(npm root -g); }; # View all syslink
 function nv { npm view "$1" version; };
 function nvs { npm view "$1" versions; };
 
+# tmux aliases
+alias tmux="tmux -u"; # Force tmux to support utf-8
+
 # Utils aliases
 function pg { echo 'Pinging Google' && ping www.google.com }; # Ping Google
 function lip { ip route get 8.8.8.8 | awk '{print $NF; exit}' }; # Get Local IP
