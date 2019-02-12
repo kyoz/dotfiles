@@ -428,5 +428,5 @@ key_bindings:
   - { key: F12,      mods: Command, chars: "\x1b[24;3~"                  }
   - { key: NumpadEnter,             chars: "\n"                          }
 # Scrollback
-  - { key: J,        mods: Control,   action: ScrollPageUp               }
-  - { key: K,        mods: Control,   action: ScrollPageDown             }
+  - { key: J,        mods: Control|Alt,   action: ScrollPageUp           }
+  - { key: K,        mods: Control|Alt,   action: ScrollPageDown         }
