@@ -3,11 +3,13 @@ alias c="cd"
 alias cl="clear";
 alias sb="source ~/.bash_profile"; # Apply .bash_profile changes
 alias vb="vim ~/.bash_profile"; # Open edit .bash_profile
+alias d="cd ~/Documents"; # Go to Document folder
 alias dt="cd ~/Desktop"; # Go to Desktop
 alias dl="cd ~/Downloads"; # Go to Downloads
-alias d="cd ~/Documents"; # Go to Document folder
 alias gh="cd ~/Documents/Github"; # Go to Github folder
 alias pj="cd ~/Documents/Projects" # Go to Project folder
+alias pg="cd ~/Documents/Playground" # Go to Playground folder
+alias nvimc="cd ~/.config/nvim" # Go to nvim config folder
 alias rmf="rm -rf $1"; # Delete folder and everything inside it
 alias ds="du -sh $1"; # Directory size
 function mkd { mkdir $1 && cd $1 }; # Make dir and jump to created folder
