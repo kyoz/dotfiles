@@ -58,7 +58,6 @@ alias tmux="tmux -u"; # Force tmux to support utf-8
 
 # Utils aliases
 function pg { echo 'Pinging Google' && ping www.google.com }; # Ping Google
-function lip { ip route get 8.8.8.8 | awk '{print $NF; exit}' }; # Get Local IP
 function get_os {
   if [ "$(uname)" == "Darwin" ]; then
     echo "mac"
@@ -69,6 +68,19 @@ function get_os {
   elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
     echo "win64"
   fi
+};
+function lip { # Get Local IP
+  case $(get_os) in
+    "linux")
+      ip route get 8.8.8.8 | awk '{print $NF; exit}'
+    ;;
+    "mac")
+      ifconfig | grep "inet " | grep -Fv 127.0.0.1 | awk '{print $2}' 
+    ;;
+    *)
+      echo "Can't get local ip address"
+    ;;
+  esac
 }
 function kp { # Kill a port
   if [ $# == 0 ]; then
