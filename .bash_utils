@@ -14,28 +14,11 @@ BASH_UTILS_PATH=~/.bash_utils
 BASH_PROFILE_PATH=~/.bash_profile
 GIT_CONFIG_PATH=~/.gitconfig
 ZSH_PATH=~/.zshrc
+VIM_PATH=~/.vimrc
 TMUX_PATH=~/.tmux.conf
 ZSH_THEME_PATH=~/.oh-my-zsh/themes/purify.zsh-theme
 ALACRITTY_PATH=~/.config/alacritty/alacritty.yml
 HYPER_PATH=~/.hyper.js
-VSCODE_PATH=""
-VSCODE_PATH_OSX="$HOME/Library/Application Support/Code/User"
-VSCODE_PATH_LINUX="$HOME/.config/Code/User"
-VSCODE_PATH_WINDOW="%APPDATA%\\Code\\User"
-
-if [ "$(uname)" == "Darwin" ]; then
-  # Do something under Mac OS X platform
-  VSCODE_PATH=$VSCODE_PATH_OSX
-elif [ "$(expr substr $(uname -s) 1 5)" == "Linux" ]; then
-  # Do something under GNU/Linux platform
-  VSCODE_PATH=$VSCODE_PATH_LINUX
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW32_NT" ]; then
-  # Do something under 32 bits Windows NT platform
-  VSCODE_PATH=$VSCODE_PATH_WINDOW
-elif [ "$(expr substr $(uname -s) 1 10)" == "MINGW64_NT" ]; then
-  # Do something under 64 bits Windows NT platform
-  VSCODE_PATH=$VSCODE_PATH_WINDOW
-fi
 
 # make text have cool color
 function log {

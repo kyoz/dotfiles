@@ -37,6 +37,12 @@ log "\nSync config from your PC to this project...\n"
 }
 
 {
+  cp $ZSH_PATH .vimrc && log_success "Synced .vimrc"
+} || {
+  log_error "Can't sync .vimrc"
+}
+
+{
   cp $TMUX_PATH .tmux.conf && log_success "Synced .tmux.conf"
 } || {
   log_error "Can't sync .tmux.conf"
@@ -58,20 +64,4 @@ log "\nSync config from your PC to this project...\n"
   cp $ZSH_THEME_PATH purify.zsh-theme && log_success "Synced zsh theme"
 } || {
   log_error "Can't sync zsh theme"
-}
-
-{
-  cp "${VSCODE_PATH}/settings.json" ./configs/vscode/settings.json &&
-  cp "${VSCODE_PATH}/keybindings.json" ./configs/vscode/keybindings.json &&
-  log_success "Sync vscode settings"
-} || {
-  log_error "Can't sync vscode settings"
-}
-
-{
-  rm -rf ./configs/vscode/snippets && mkdir ./configs/vscode/snippets &&
-  cp -R  "${VSCODE_PATH}/snippets/." ./configs/vscode/snippets/ &&
-  log_success "Synced vscode snippets"
-} || {
-  log_error "Can't sync vscode snippets"
 }

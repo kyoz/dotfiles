@@ -37,6 +37,12 @@ log "\nUpdating config to your PC...\n"
 }
 
 {
+  cp .vimrc $VIM_PATH && log_success "Updated .vimrc"
+} || {
+  log_error "Can't update .vimrc"
+}
+
+{
   cp .tmux.conf $TMUX_PATH && log_success "Updated .tmux.conf"
 } || {
   log_error "Can't update .tmux.conf"
@@ -58,20 +64,4 @@ log "\nUpdating config to your PC...\n"
   cp purify.zsh-theme $ZSH_THEME_PATH && log_success "Updated zsh theme"
 } || {
   log_error "Can't update zsh theme"
-}
-
-{
-  cp ./configs/vscode/settings.json "${VSCODE_PATH}/settings.json" &&
-  cp ./configs/vscode/keybindings.json "${VSCODE_PATH}/keybindings.json" &&
-  log_success "Updated vscode settings"
-} || {
-  log_error "Can't update vscode settings"
-}
-
-{
-  rm -rf "${VSCODE_PATH}/snippets" && mkdir "${VSCODE_PATH}/snippets" &&
-  cp -R ./configs/vscode/snippets/. "${VSCODE_PATH}/snippets/" &&
-  log_success "Updated vscode snippets"
-} || {
-  log_error "Can't update vscode snippets"
 }
