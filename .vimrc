@@ -77,7 +77,7 @@ set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
 " }}}
 
 " FOLD SETTINGS {{{
-aug filetype_vim
+aug vim_folding
   au!
   au FileType vim setlocal foldmethod=marker
 aug END
