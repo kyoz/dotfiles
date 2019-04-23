@@ -76,6 +76,13 @@ set undoreload=1000 "----------------------------- Default is 10000 -> Too large
 set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
 " }}}
 
+" FOLD SETTINGS {{{
+aug filetype_vim
+  au!
+  au FileType vim setlocal foldmethod=marker
+aug END
+" }}}
+
 " MAPPINGS {{{
 let mapleader = "\<Space>" 
 let maplocalleader = "\\"
