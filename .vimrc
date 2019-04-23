@@ -7,10 +7,7 @@
 "         __/ |
 "        |___/
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » DISPLAY «              ║
-"                ╚══════════════════════════════════════════╝
-
+" DISPLAY {{{
 set encoding=utf8
 set nowrap "---------------------------------- do not automatically wrap on load
 set colorcolumn=80 "---------------------------------------- 80 line column show
@@ -33,35 +30,27 @@ set showtabline=2 "----------------------------------------- Always show tabline
 set noshowmode "--------------------------- Hide default mode text (e.g. INSERT)
 set display+=lastline "--------------------- As must as possible of the lastline
 set previewheight=3 "------------------------------------ Smaller preview height
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » SYNTAX «               ║
-"                ╚══════════════════════════════════════════╝
-
+" SYNTAX {{{
 syntax on "---------------------------------------------- Enable Syntax for Code
 syntax enable
 set foldmethod=manual "---------------------------------- Support fold by indent
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║          » FILE, FILE'S TYPES «          ║
-"                ╚══════════════════════════════════════════╝
-
+" FILE, FILE'S TYPES {{{
 set autoread "---------------------------------------- Auto reloaded Edited File
 set noswapfile "------------------------------------------ Dont create wrap file
 set nobackup "------------------------------------------------- Dont save backup
 filetype plugin on "--------------------------------------------- Turn on plugin
 let g:jsx_ext_required = 1 "------------------------- Dont detect js file as jsx
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » TYPINGS «              ║
-"                ╚══════════════════════════════════════════╝
-
+" TYPINGS {{{
 set backspace=indent,eol,start "----------------- Allow backspace in insert mode
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║               » TAB, INDENT «            ║
-"                ╚══════════════════════════════════════════╝
-
+" TAB, INDENT {{{
 set tabstop=2 "---------------------------------------------- 2 spaces for 1 tab
 set softtabstop=2
 set shiftwidth=2
@@ -70,32 +59,24 @@ set smarttab
 filetype indent on "------------------------------------- Turn on default indent
 set autoindent
 set smartindent
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » SEARCH «               ║
-"                ╚══════════════════════════════════════════╝
-
+" SEARCH {{{
 set hlsearch "------------------------------------------ Highlight search result
 set incsearch "------------------------------------------ Allow Insert higtlight
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║                 » FORMAT «               ║
-"                ╚══════════════════════════════════════════╝
-
+" FORMAT {{{
 set nrformats-=octal "----------------------------------- Format number as octal
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║                  » UNDO «                ║
-"                ╚══════════════════════════════════════════╝
-
+" UNDO {{{
 set undolevels=100 "------------------------------- Default is 1000 -> Too large
 set undoreload=1000 "----------------------------- Default is 10000 -> Too large
 set undodir=~/.config/nvim/undodir "--------------- Default folder for undo step
+" }}}
 
-"                ╔══════════════════════════════════════════╗
-"                ║                » MAPPINGS «              ║
-"                ╚══════════════════════════════════════════╝
-
+" MAPPINGS {{{
 let mapleader = "\<Space>" 
 let maplocalleader = "\\"
 
@@ -122,3 +103,4 @@ nnoremap <Up> <NOP>
 nnoremap <Down> <NOP>
 nnoremap <Left> <NOP>
 nnoremap <Right> <NOP>
+" }}}
