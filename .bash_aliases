@@ -21,6 +21,7 @@ alias cr="code . -r";
 # git aliases
 alias ga="git add .";
 alias gc="git commit -m $1";
+alias gca="git add . && git commit -m $1";
 alias gcl="git clone $1";
 alias gs="git status";
 alias gp="git pull";
@@ -30,11 +31,13 @@ alias gd="git diff";
 alias gl="git lg";
 alias gco="git co $1";
 alias gbr="git br -va";
-alias grmt="git remote -v";
+alias gr="git remote -v";
 alias gt="git tag";
-function gat { git tag -a "$1" -m "$2"};
+alias gsi="git submodule update --init --recursive";
+alias gsu="git submodule update --recursive";
 alias gtpush="git push origin $1";
 alias gtdel="git tag -d $1 && git push --delete origin $1";
+function gat { git tag -a "$1" -m "$2"};
 
 # npm aliases
 alias nlg="npm list -g --depth=0";
