@@ -102,3 +102,6 @@ function kp { # Kill a port
     esac
   fi
 }
+function clean_node_modules {
+  find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+}
