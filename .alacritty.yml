@@ -119,8 +119,8 @@ debug.render_timer: false
 colors:
   # Default colors
   primary:
-    background: '0x31343F'
-    foreground: '0xeaeaea'
+    background: '0x313440'
+    foreground: '0xFAFAFA'
 
     # (Optional) Bright and Dim foreground colors
     #
