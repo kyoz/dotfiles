@@ -139,7 +139,7 @@ colors:
   # Selection colors
   selection:
     text:       '0xFAFAFA'
-    background: '0x2B2E3B'
+    background: '0x252834'
 
   # Normal colors
   normal:
