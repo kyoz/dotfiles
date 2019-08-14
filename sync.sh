@@ -37,7 +37,7 @@ log "\nSync config from your PC to this project...\n"
 }
 
 {
-  cp $ZSH_PATH .vimrc && log_success "Synced .vimrc"
+  cp $VIM_PATH .vimrc && log_success "Synced .vimrc"
 } || {
   log_error "Can't sync .vimrc"
 }
