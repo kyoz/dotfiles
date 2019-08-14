@@ -1,10 +1,11 @@
 # if you use oh-my-zsh, remember to put 'source ~/.bash_profile' at the end of .zshrc
+
 export TERM=xterm-256color
+export EDITOR="nvim"
+export TERMINAL="st"
+export BROWSER="brave"
+# export READER="zathura"
+# export FILE="nnn"
 
-# Source Aliases
-source ~/.bash_aliases
-
-# nvm
-export NVM_DIR="$HOME/.nvm"
-[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
-[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+[[ -f ~/.bash_aliases ]] && . ~/.bash_aliases
+[[ -f ~/.bashrc ]] && . ~/.bashrc
