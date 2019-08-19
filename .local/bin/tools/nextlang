@@ -1,0 +1,15 @@
+#!/usr/bin/env sh
+
+current_lang=$(ibus engine)
+en="xkb:us::eng"
+vi="teni"
+
+if [ $current_lang == $en ]; then
+  lang=$vi
+elif [ $current_lang == $vi ]; then
+  lang=$en
+else
+  lang=$en
+fi
+
+ibus engine $lang

@@ -25,7 +25,7 @@ X_DEFAULT_PATH=~/.Xdefaults
 X_INITRC_PATH=~/.xinitrc
 X_MODMAP_PATH=~/.Xmodmap
 X_PROFILE_PATH=~/.xprofile
-X_RESOURCE_PATH=~/Xresources
+X_RESOURCE_PATH=~/.Xresources
 SXHKDRC_PATH=~/.config/sxhkd/sxhkdrc
 
 # i3

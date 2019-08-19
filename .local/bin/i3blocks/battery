@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+# Give a battery name (e.g. BAT0) as an argument.
+
+capacity=$(cat /sys/class/power_supply/"$1"/capacity) || exit
+status=$(cat /sys/class/power_supply/"$1"/status)
+
+if [ "$status" == "Full" ]; then
+  printf "%s%s" "  " "Full"
+else
+  printf "%s%s%s" "$(echo "$status" | sed -e "s/,//;s/Discharging//;s/Not Charging//;s/Charging//;s/Unknown//;s/Full/ /;s/ 0*/ /g;s/ :/ /g")" "$(echo " $capacity" | sed -e 's/$/%/')"
+fi

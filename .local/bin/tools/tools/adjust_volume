@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+case $1 in
+  "up")
+    pulsemixer --change-volume +5 && exec pkill -SIGRTMIN+10 i3blocks
+  ;;
+  "down")
+    pulsemixer --change-volume -5 && exec pkill -SIGRTMIN+10 i3blocks
+  ;;
+  "mute")
+    pulsemixer --toggle-mute && exec pkill -SIGRTMIN+10 i3blocks
+  ;;
+esac

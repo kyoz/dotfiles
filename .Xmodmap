@@ -1,0 +1,7 @@
+! Use xev to get key events
+
+! Swap ESC and CAPLOCKS
+remove Lock = Caps_Lock
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock

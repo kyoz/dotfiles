@@ -106,9 +106,9 @@ fi
 }
 
 {
-  cp $SXHKDRC_PATH .config/sxhkd/sxhkdrc && log_success "Synced .sxhkdrc"
+  cp $SXHKDRC_PATH .config/sxhkd/sxhkdrc && log_success "Synced sxhkdrc"
 } || {
-  log_error "Can't sync .sxhkdrc"
+  log_error "Can't sync sxhkdrc"
 }
 
 {
