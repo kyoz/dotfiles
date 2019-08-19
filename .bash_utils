@@ -33,9 +33,9 @@ I3_PATH=~/.config/i3/config
 I3_BLOCK_PATH=~/.config/i3blocks/config
 
 # LOCAL
-LOCAL_I3_PATH=~/.local/bin/i3/*
-LOCAL_I3_BLOCKS_PATH=~/.local/bin/i3blocks/*
-LOCAL_TOOLS_PATH=~/.local/bin/tools/*
+LOCAL_I3_PATH=~/.local/bin/i3/
+LOCAL_I3_BLOCKS_PATH=~/.local/bin/i3blocks/
+LOCAL_TOOLS_PATH=~/.local/bin/tools/
 
 # make text have cool color
 function log {
