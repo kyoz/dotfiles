@@ -124,19 +124,19 @@ fi
 }
 
 {
-  cp -R $LOCAL_I3_PATH .local/bin/i3 && log_success "Synced local i3 scripts"
+  cp -R $LOCAL_I3_PATH .local/bin && log_success "Synced local i3 scripts"
 } || {
   log_error "Can't sync local i3 scripts"
 }
 
 {
-  cp -R $LOCAL_I3_BLOCKS_PATH .local/bin/i3blocks && log_success "Synced local i3blocks scripts"
+  cp -R $LOCAL_I3_BLOCKS_PATH .local/bin && log_success "Synced local i3blocks scripts"
 } || {
   log_error "Can't sync local i3blocks scripts"
 }
 
 {
-  cp -R $LOCAL_TOOLS_PATH .local/bin/tools && log_success "Synced local tool scripts"
+  cp -R $LOCAL_TOOLS_PATH .local/bin && log_success "Synced local tool scripts"
 } || {
   log_error "Can't sync local tool scripts"
 }
