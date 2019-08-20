@@ -14,9 +14,9 @@ BASH_UTILS_PATH=~/.bash_utils
 BASH_PROFILE_PATH=~/.bash_profile
 GIT_CONFIG_PATH=~/.gitconfig
 ZSH_PATH=~/.zshrc
+ZSH_THEME_PATH=~/.oh-my-zsh/themes/purify.zsh-theme
 VIM_PATH=~/.vimrc
 TMUX_PATH=~/.tmux.conf
-ZSH_THEME_PATH=~/.oh-my-zsh/themes/purify.zsh-theme
 ALACRITTY_PATH=~/.config/alacritty/alacritty.yml
 HYPER_PATH=~/.hyper.js
 
@@ -36,6 +36,14 @@ I3_BLOCK_PATH=~/.config/i3blocks/config
 LOCAL_I3_PATH=~/.local/bin/i3
 LOCAL_I3_BLOCKS_PATH=~/.local/bin/i3blocks
 LOCAL_TOOLS_PATH=~/.local/bin/tools
+
+function copy {
+  {
+    cp $1 $2 && log_success "Synced $2"
+  } || {
+    log_error "Can't sync $2"
+  }
+}
 
 # make text have cool color
 function log {
