@@ -6,8 +6,7 @@ xset r rate 200 25
 # Start X at 220 DPI
 xrandr | grep 'eDP1 connected' && xrandr --output eDP1 --mode 2880x1800 --dpi 220
 xrandr | grep 'DP1 connected' && xrandr --output DP1 --mode 1366x768 --right-of eDP1 --scale 1.2x1.2
-# xrandr --dpi 220
-# xrandr --output DP1 --mode 1366x768
+xrandr | grep 'DP2 connected' && xrandr --output DP2 --mode 1366x768 --right-of eDP1 --scale 1.2x1.2
 
 # Merge & load configuration from .Xresources
 if [ -f $HOME/.Xresources ]; then
