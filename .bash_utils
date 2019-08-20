@@ -45,6 +45,14 @@ function copy {
   }
 }
 
+function copy_folder {
+  {
+    cp -R $1 $2 && log_success "Synced $2"
+  } || {
+    log_error "Can't sync $2"
+  }
+}
+
 # make text have cool color
 function log {
   tput setaf $GREEN; echo -e $1;
