@@ -6,62 +6,35 @@ set -e pipefail
 
 log "\nUpdating config to your PC...\n"
 
-{
-  cp .bash_aliases $BASH_ALIASES_PATH && log_success "Updated .bash_aliases"
-} || {
-  log_error "Can't update .bash_aliases"
-}
+copy .bash_aliases $BASH_ALIASES_PATH
+copy .bash_utils $BASH_UTILS_PATH
+copy .bash_profile $BASH_PROFILE_PATH
+copy .gitconfig $GIT_CONFIG_PATH
+copy .zshrc $ZSH_PATH
+copy .vimrc $VIM_PATH
+copy .tmux.conf $TMUX_PATH
+copy .alacritty.yml $ALACRITTY_PATH
+copy .hyper.js $HYPER_PATH
+copy purify.zsh-theme $ZSH_THEME_PATH
 
-{
-  cp .bash_utils $BASH_UTILS_PATH && log_success "Updated .bash_utils"
-} || {
-  log_error "Can't update .bash_utils"
-}
+################################################################################
+###########################         ARCH         ###############################
+################################################################################
 
-{
-  cp .bash_profile $BASH_PROFILE_PATH && log_success "Updated .bash_profile"
-} || {
-  log_error "Can't update .bash_profile"
-}
+# If not arch, don't sync or install those below files
+if [ ! $(uname -r | grep 'ARCH') ]; then
+  exit
+fi
 
-{
-  cp .gitconfig $GIT_CONFIG_PATH && log_success "Updated .gitconfig"
-} || {
-  log_error "Can't update .gitconfig"
-}
+copy .Xdefaults $X_DEFAULT_PATH
+copy .xinitrc $X_INITRC_PATH
+copy .Xmodmap $X_MODMAP_PATH
+copy .xprofile $X_PROFILE_PATH
+copy .Xresources $X_RESOURCE_PATH
+copy .config/sxhkd/sxhkdrc $SXHKDRC_PATH
+copy .config/i3/config $I3_PATH
+copy .config/i3blocks/config $I3_BLOCK_PATH
+copy -R .local/bin $LOCAL_I3_PATH
+copy -R .local/bin $LOCAL_I3_BLOCKS_PATH
+copy -R .local/bin $LOCAL_TOOLS_PATH
 
-{
-  cp .zshrc $ZSH_PATH && log_success "Updated .zshrc"
-} || {
-  log_error "Can't update .zshrc"
-}
-
-{
-  cp .vimrc $VIM_PATH && log_success "Updated .vimrc"
-} || {
-  log_error "Can't update .vimrc"
-}
-
-{
-  cp .tmux.conf $TMUX_PATH && log_success "Updated .tmux.conf"
-} || {
-  log_error "Can't update .tmux.conf"
-}
-
-{
-  cp .alacritty.yml $ALACRITTY_PATH && log_success "Updated .alacritty.yml"
-} || {
-  log_error "Can't update .alacritty.yml"
-}
-
-{
-  cp .hyper.js $HYPER_PATH && log_success "Updated .hyper.js"
-} || {
-  log_error "Can't update .hyper.js"
-}
-
-{
-  cp purify.zsh-theme $ZSH_THEME_PATH && log_success "Updated zsh theme"
-} || {
-  log_error "Can't update zsh theme"
-}

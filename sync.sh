@@ -11,11 +11,11 @@ copy $BASH_UTILS_PATH .bash_utils
 copy $BASH_PROFILE_PATH .bash_profile
 copy $GIT_CONFIG_PATH .gitconfig
 copy $ZSH_PATH .zshrc
-copy $ZSH_THEME_PATH purify.zsh-theme
 copy $VIM_PATH .vimrc
 copy $TMUX_PATH .tmux.conf
 copy $ALACRITTY_PATH .alacritty.yml
 copy $HYPER_PATH .hyper.js
+copy $ZSH_THEME_PATH purify.zsh-theme
 
 ################################################################################
 ###########################         ARCH         ###############################
