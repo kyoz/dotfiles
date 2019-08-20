@@ -34,7 +34,7 @@ copy .Xresources $X_RESOURCE_PATH
 copy .config/sxhkd/sxhkdrc $SXHKDRC_PATH
 copy .config/i3/config $I3_PATH
 copy .config/i3blocks/config $I3_BLOCK_PATH
-copy_folder .local/bin $LOCAL_I3_PATH
-copy_folder .local/bin $LOCAL_I3_BLOCKS_PATH
-copy_folder .local/bin $LOCAL_TOOLS_PATH
+copy_folder .local/bin/i3 $LOCAL_BIN_PATH
+copy_folder .local/bin/i3blocks $LOCAL_BIN_PATH
+copy_folder .local/bin/tools $LOCAL_BIN_PATH
 
