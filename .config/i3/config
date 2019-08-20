@@ -51,10 +51,10 @@ bar {
 # Windows decoration colors
 client.placeholder      #242424 #242424 #242424
 client.background       #242424 #242424 #242424
-client.focused          #282C34 #282C34 #e5e5e5 #5FAFFF
-client.unfocused        #282C34 #222222 #aaaaaa #222222
-client.focused_inactive #282C34 #222222 #a9a9a9 #222222
-client.urgent           #282C34 #282C34 #f7f7f7 #282C34
+client.focused          #282C34 #282C34 #E5E5E5 #5FAFFF
+client.unfocused        #282C34 #222222 #AAAAAA #222222
+client.focused_inactive #282C34 #222222 #A9A9A9 #222222
+client.urgent           #282C34 #282C34 #F7F7F7 #282C34
 
 # Status bar font & size
 font pango:monospace 7
@@ -68,7 +68,7 @@ gaps outer 2
 #########################          BINDINGS          ###########################
 
 # General
-bindsym $mod+d exec dmenu_run
+bindsym $mod+d exec "dmenu_run -nf '#BBBBBB' -nb '#222222' -sb '#5FAFFF' -sf '#212121' -fn 'Iosevka Term-10' -p 'dmenu prompt &gt;'"
 bindsym $mod+Shift+c reload
 bindsym $mod+Shift+r restart
 
