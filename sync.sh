@@ -21,8 +21,8 @@ copy $ZSH_THEME_PATH purify.zsh-theme
 ###########################         ARCH         ###############################
 ################################################################################
 
-# If not arch, don't sync or install those below files
-if [ ! $(uname -r | grep 'ARCH') ]; then
+# If not linux, don't sync or install those below files
+if [[ "$OSTYPE" != "linux-gnu" ]]; then
   exit
 fi
 
