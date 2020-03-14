@@ -20,6 +20,10 @@ TMUX_PATH=~/.tmux.conf
 ALACRITTY_PATH=~/.config/alacritty/alacritty.yml
 HYPER_PATH=~/.hyper.js
 
+# Paths for yabai & skhd on IOS
+YABAI_PATH=~/.config/yabai/yabairc
+SKHD_PATH=~/.config/skhd/skhdrc
+
 # Paths for dotfiles on arch
 X_DEFAULT_PATH=~/.Xdefaults
 X_INITRC_PATH=~/.xinitrc
