@@ -17,24 +17,24 @@ copy .alacritty.yml $ALACRITTY_PATH
 copy .hyper.js $HYPER_PATH
 copy purify.zsh-theme $ZSH_THEME_PATH
 
-################################################################################
-###########################         ARCH         ###############################
-################################################################################
-
-# If not linux, don't sync or install those below files
-if [[ "$OSTYPE" != "linux-gnu" ]]; then
-  exit
+# If os is OSX, then install those below files
+if [[ "$OSTYPE" == *"darwin"* ]]; then
+  copy .config/yabai/yabairc $YABAI_PATH
+  copy .config/skhd/skhdrc $SKHD_PATH
 fi
 
-copy .Xdefaults $X_DEFAULT_PATH
-copy .xinitrc $X_INITRC_PATH
-copy .Xmodmap $X_MODMAP_PATH
-copy .xprofile $X_PROFILE_PATH
-copy .Xresources $X_RESOURCE_PATH
-copy .config/sxhkd/sxhkdrc $SXHKDRC_PATH
-copy .config/i3/config $I3_PATH
-copy .config/i3blocks/config $I3_BLOCK_PATH
-copy_folder .local/bin/i3 $LOCAL_BIN_PATH
-copy_folder .local/bin/i3blocks $LOCAL_BIN_PATH
-copy_folder .local/bin/tools $LOCAL_BIN_PATH
+# If os is linux, then install those below files
+if [[ "$OSTYPE" == *"linux"* ]]; then
+  copy .Xdefaults $X_DEFAULT_PATH
+  copy .xinitrc $X_INITRC_PATH
+  copy .Xmodmap $X_MODMAP_PATH
+  copy .xprofile $X_PROFILE_PATH
+  copy .Xresources $X_RESOURCE_PATH
+  copy .config/sxhkd/sxhkdrc $SXHKDRC_PATH
+  copy .config/i3/config $I3_PATH
+  copy .config/i3blocks/config $I3_BLOCK_PATH
+  copy_folder .local/bin/i3 $LOCAL_BIN_PATH
+  copy_folder .local/bin/i3blocks $LOCAL_BIN_PATH
+  copy_folder .local/bin/tools $LOCAL_BIN_PATH
+fi
 

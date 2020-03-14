@@ -23,7 +23,6 @@ if [[ "$OSTYPE" == *"darwin"* ]]; then
   copy $SKHD_PATH .config/skhd/skhdrc
 fi
 
-
 # If os is linux, then sync those below files
 if [[ "$OSTYPE" == *"linux"* ]]; then
   copy $X_DEFAULT_PATH .Xdefaults
@@ -38,5 +37,4 @@ if [[ "$OSTYPE" == *"linux"* ]]; then
   copy_folder $LOCAL_I3_BLOCKS_PATH .local/bin
   copy_folder $LOCAL_TOOLS_PATH .local/bin
 fi
-
 
