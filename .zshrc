@@ -109,3 +109,5 @@ cl
 
 # print random quote from iquotes
 quote
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
