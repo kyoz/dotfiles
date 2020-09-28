@@ -1,6 +1,0 @@
-#!/usr/bin/env sh
-
-left_fan=$(sensors | awk '/Left side/ { print $4 }')
-right_fan=$(sensors | awk '/Right side/ { print $4 }')
-
-echo $left_fan-$right_fan
