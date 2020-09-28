@@ -1,0 +1,30 @@
+#!/bin/sh
+
+dwmbar_wifi () {
+    SERVICENAME=$(connmanctl services | grep -E "^\*AO|^\*O" | grep -Eo 'wifi_.*|ethernet_.*')
+
+    if [ ! "$SERVICENAME" ]; then
+        printf "%s睊  ?" "$DWMBAR_SEPERATOR" > $DWMBAR_WIFI
+        return
+    else
+        STRENGTH=$(connmanctl services "$SERVICENAME" | sed -n -e 's/Strength =//p' | tr -d ' ')
+        CONNAME=$(connmanctl services "$SERVICENAME" | sed -n -e 's/Name =//p' | tr -d ' ')
+    fi
+
+    # if STRENGTH is empty, we have a wired connection
+    if [ "$STRENGTH" ]; then
+        printf "%s  %s %s%%" "$DWMBAR_SEPERATOR" "$CONNAME" "$STRENGTH" > $DWMBAR_WIFI
+    else
+        printf "%s  %s %s" "$DWMBAR_SEPERATOR" "$CONNAME" > $DWMBAR_WIFI
+    fi
+}
+
+if [ -z $1 ]; then
+  dwmbar_wifi
+else
+  while true
+  do
+    dwmbar_wifi
+    sleep $1
+  done
+fi

@@ -8,31 +8,26 @@ GREEN=2
 BLUE=4
 WHITE=7
 
-# Paths
+# General
 BASH_ALIASES_PATH=~/.bash_aliases
-BASH_UTILS_PATH=~/.bash_utils
 BASH_PROFILE_PATH=~/.bash_profile
+BASHRC_PATH=~/.bashrc
 GIT_CONFIG_PATH=~/.gitconfig
-ZSH_PATH=~/.zshrc
-ZSH_THEME_PATH=~/.oh-my-zsh/themes/purify.zsh-theme
-VIM_PATH=~/.vimrc
 TMUX_PATH=~/.tmux.conf
-ALACRITTY_PATH=~/.config/alacritty/alacritty.yml
-HYPER_PATH=~/.hyper.js
+ZSH_PATH=~/.zshrc
+VIM_PATH=~/.vimrc
 
-# Paths for yabai & skhd on IOS
-YABAI_PATH=~/.config/yabai/yabairc
-SKHD_PATH=~/.config/skhd/skhdrc
-
-# Paths for dotfiles on arch
+# X
 X_DEFAULT_PATH=~/.Xdefaults
 X_INITRC_PATH=~/.xinitrc
 X_MODMAP_PATH=~/.Xmodmap
 X_PROFILE_PATH=~/.xprofile
 X_RESOURCE_PATH=~/.Xresources
-SXHKDRC_PATH=~/.config/sxhkd/sxhkdrc
 
-# LOCAL
+# Dunst
+DUNST_PATH=~/.config/dunst/dunstrc
+
+# Tools
 LOCAL_BIN_PATH=~/.local/bin
 
 function copy {
@@ -45,6 +40,11 @@ function copy {
 
 function copy_folder {
   {
+    # Create if folder doesn't exist
+    if [[ ! -d $2 ]]; then
+      mkdir -p $2
+    fi
+
     cp -R $1 $2 && log_success "Synced $2"
   } || {
     log_error "Can't sync $2"

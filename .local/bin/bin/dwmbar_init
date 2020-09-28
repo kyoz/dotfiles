@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Create cache folder if doesn't exist
+mkdir -p $DWMBAR_CACHE_FOLDER
+
+# Create cache file if doesn't exist
+test -f $DWMBAR_WEATHER || touch $DWMBAR_WEATHER
+test -f $DWMBAR_CPU || touch $DWMBAR_CPU
+test -f $DWMBAR_MEMORY || touch $DWMBAR_MEMORY
+test -f $DWMBAR_FAN || touch $DWMBAR_FAN
+test -f $DWMBAR_KEYBOARD || touch $DWMBAR_KEYBOARD
+test -f $DWMBAR_WIFI || touch $DWMBAR_WIFI
+test -f $DWMBAR_SCREEN || touch $DWMBAR_SCREEN
+test -f $DWMBAR_SOUND || touch $DWMBAR_SOUND
+test -f $DWMBAR_BATTERY || touch $DWMBAR_BATTERY
+test -f $DWMBAR_TIME || touch $DWMBAR_TIME

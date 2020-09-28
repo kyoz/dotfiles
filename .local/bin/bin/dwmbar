@@ -1,0 +1,50 @@
+#!/bin/sh
+
+# Input
+if [ -z $1 ]; then
+    LOOP=false
+else
+    LOOP=true
+fi
+
+auto_update() {
+    . "$DWMBAR_MODULES/weather" 300 &
+    . "$DWMBAR_MODULES/cpu" 5 &
+    . "$DWMBAR_MODULES/memory" 5 &
+    . "$DWMBAR_MODULES/fan" 5 &
+    . "$DWMBAR_MODULES/keyboard" &
+    . "$DWMBAR_MODULES/wifi" 5 &
+    . "$DWMBAR_MODULES/screen" &
+    . "$DWMBAR_MODULES/sound" &
+    . "$DWMBAR_MODULES/battery" 10 &
+    . "$DWMBAR_MODULES/time" 1 &
+}
+
+update_status() {
+    display=""
+    display="$display$(cat $DWMBAR_WEATHER)"
+    display="$display$(cat $DWMBAR_CPU)"
+    display="$display$(cat $DWMBAR_MEMORY)"
+    display="$display$(cat $DWMBAR_FAN)"
+    display="$display$(cat $DWMBAR_KEYBOARD)"
+    display="$display$(cat $DWMBAR_WIFI)"
+    display="$display$(cat $DWMBAR_SCREEN)"
+    display="$display$(cat $DWMBAR_SOUND)"
+    display="$display$(cat $DWMBAR_BATTERY)"
+    display="$display$(cat $DWMBAR_TIME)"
+
+    xsetroot -name "$display"
+}
+
+# Update DWM Status
+
+if [ "$LOOP" = true ]; then
+    auto_update
+
+    while true; do
+        update_status
+        sleep 1
+    done
+else
+    update_status &
+fi

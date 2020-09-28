@@ -1,0 +1,10 @@
+#!/bin/sh
+# gh is github :))
+
+if [[ -z $1 ]]; then
+  $BROWSER "https://www.github.com"
+else
+  SEARCH="$search%20$1"
+  $BROWSER "https://github.com/search?q=$SEARCH"
+fi
+

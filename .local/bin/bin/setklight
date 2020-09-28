@@ -1,0 +1,17 @@
+#!/bin/sh
+
+VALUE=$1
+CURRENT_LIGHT=$(kbdlight get)
+
+if [[ -z $CURRENT_LIGHT ]]; then
+  echo $CURRENT_LIGHT
+  exit
+fi
+
+if [[ $CURRENT_LIGHT -gt 50 ]]; then
+  kbdlight off
+  notify-send "  Keyboard Light: OFF" &
+else
+  kbdlight max
+  notify-send "  Keyboard Light: ON" &
+fi

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+dwmbar_cpu() {
+  CPU=$(sensors | awk '/Core 0/ {print " " $3}')
+  printf "%s%s" "$DWMBAR_SEPERATOR" "$CPU" > $DWMBAR_CPU
+}
+
+if [ -z $1 ]; then
+  dwmbar_cpu
+else
+  while true
+  do
+    dwmbar_cpu
+    sleep $1
+  done
+fi

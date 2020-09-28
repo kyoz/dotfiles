@@ -1,0 +1,10 @@
+#!/bin/sh
+# s is search :))
+
+if [[ -z $1 ]]; then
+  $BROWSER "https://google.com"
+else
+  SEARCH="$search%20$1"
+  $BROWSER "http://www.google.com/search?q=$SEARCH"
+fi
+
