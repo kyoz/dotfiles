@@ -11,8 +11,8 @@ copy $BASH_PROFILE_PATH .bash_profile
 copy $BASHRC_PATH .bashrc
 copy $GIT_CONFIG_PATH .gitconfig
 copy $TMUX_PATH .tmux.conf
-copy $ZSH_PATH .zshrc
 copy $VIM_PATH .vimrc
+copy $ZSH_PATH .zshrc
 
 if [[ "$OSTYPE" == *"linux"* ]]; then
   # X

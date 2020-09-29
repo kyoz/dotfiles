@@ -14,8 +14,8 @@ BASH_PROFILE_PATH=~/.bash_profile
 BASHRC_PATH=~/.bashrc
 GIT_CONFIG_PATH=~/.gitconfig
 TMUX_PATH=~/.tmux.conf
-ZSH_PATH=~/.zshrc
 VIM_PATH=~/.vimrc
+ZSH_PATH=~/.zshrc
 
 # X
 X_DEFAULT_PATH=~/.Xdefaults
