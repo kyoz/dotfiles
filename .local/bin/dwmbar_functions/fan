@@ -4,7 +4,11 @@ dwmbar_fan() {
   LEFT=$(sensors | awk '/Left side/ {printf $4}')
   RIGHT=$(sensors | awk '/Right side/ {printf $4}')
 
-  printf "%s %s/%s" "$DWMBAR_SEPERATOR" "$LEFT" "$RIGHT" > $DWMBAR_FAN
+  if [[ ! -z $LEFT ]] && [[ ! -z $RIGHT ]]; then
+    printf "%s %s/%s" "$DWMBAR_SEPERATOR" "$LEFT" "$RIGHT" > $DWMBAR_FAN
+  else
+    printf "" > $DWMBAR_FAN
+  fi
 }
 
 if [ -z $1 ]; then

@@ -27,9 +27,6 @@ X_RESOURCE_PATH=~/.Xresources
 # Dunst
 DUNST_PATH=~/.config/dunst/dunstrc
 
-# Tools
-LOCAL_BIN_PATH=~/.local/bin
-
 function copy {
   {
     cp $1 $2 && log_success "Synced $2"

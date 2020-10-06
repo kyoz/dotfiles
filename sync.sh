@@ -26,6 +26,6 @@ if [[ "$OSTYPE" == *"linux"* ]]; then
   copy $DUNST_PATH .dunstrc
 
   # Tools
-  copy_folder $LOCAL_BIN_PATH .local/bin
+  copy_folder ~/.local/bin .local
 fi
 
