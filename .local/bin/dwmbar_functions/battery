@@ -1,6 +1,12 @@
 #!/bin/sh
 
 dwmbar_battery () {
+    # Not found info
+    if [[ ! -d "/sys/class/power_supply/BAT0" ]]; then
+      printf "" > $DWMBAR_BATTERY
+      exit
+    fi
+
     CHARGE=$(cat /sys/class/power_supply/BAT0/capacity)
     STATUS=$(cat /sys/class/power_supply/BAT0/status)
 

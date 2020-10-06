@@ -20,4 +20,4 @@ fi
 
 amixer set Master "$VALUE%"
 notify-send "  Volume: $VALUE%" &
-. "$DWMBAR_MODULES/screen" &
+. "$DWMBAR_MODULES/sound" &
