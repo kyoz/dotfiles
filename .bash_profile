@@ -43,6 +43,7 @@ export NVM_DIR="$HOME/.nvm"
 export ANDROID_HOME=~/.android/Sdk
 export ANDROID_SDK_ROOT=~/.android/Sdk
 export PATH=$PATH:~/.gradle/bin
+export _JAVA_AWT_WM_NONREPARENTING=1 # Fix Android Studio Glitchy render with DWM
 
 # Start X Server
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
