@@ -42,6 +42,10 @@ export NVM_DIR="$HOME/.nvm"
 # Android
 export ANDROID_HOME=~/.android/Sdk
 export ANDROID_SDK_ROOT=~/.android/Sdk
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools
 export PATH=$PATH:~/.gradle/bin
 export _JAVA_AWT_WM_NONREPARENTING=1 # Fix Android Studio Glitchy render with DWM
 
