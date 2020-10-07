@@ -42,6 +42,7 @@ export NVM_DIR="$HOME/.nvm"
 # Android
 export ANDROID_HOME=~/.android/Sdk
 export ANDROID_SDK_ROOT=~/.android/Sdk
+export PATH=$PATH:~/.gradle/bin
 
 # Start X Server
 if [ -z "$DISPLAY" ] && [ -n "$XDG_VTNR" ] && [ "$XDG_VTNR" -eq 1 ]; then
