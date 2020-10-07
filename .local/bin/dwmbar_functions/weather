@@ -4,7 +4,7 @@ dwmbar_weather() {
     LOCATION=SaiGon
     WEATHER=$(curl -s wttr.in/$LOCATION?format=1 | cut -c8-)
 
-    if [ -z $WEATHER ]; then
+    if [[ -z $WEATHER ]]; then
       printf "  ..." > $DWMBAR_WEATHER
     else
       printf "  %s" $WEATHER > $DWMBAR_WEATHER
