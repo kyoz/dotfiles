@@ -9,23 +9,12 @@ BLUE=4
 WHITE=7
 
 # General
-BASH_ALIASES_PATH=~/.bash_aliases
-BASH_PROFILE_PATH=~/.bash_profile
-BASHRC_PATH=~/.bashrc
+FISH_CONFIG_PATH=~/.config/fish/config.fish
+FISH_ALIASES_PATH=~/.config/fish/aliases.fish
+FISH_INIT_PATH=~/.config/fish/init.fish
 GIT_CONFIG_PATH=~/.gitconfig
 TMUX_PATH=~/.tmux.conf
 VIM_PATH=~/.vimrc
-ZSH_PATH=~/.zshrc
-
-# X
-X_DEFAULT_PATH=~/.Xdefaults
-X_INITRC_PATH=~/.xinitrc
-X_MODMAP_PATH=~/.Xmodmap
-X_PROFILE_PATH=~/.xprofile
-X_RESOURCE_PATH=~/.Xresources
-
-# Dunst
-DUNST_PATH=~/.config/dunst/dunstrc
 
 function copy {
   {

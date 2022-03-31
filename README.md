@@ -1,5 +1,5 @@
 # Kyoz's dotfiles
-dotfiles to configurating my working enviroment :cat:
+dotfiles to configurating my working enviroment (OSX) :cat:
 
 <p align="center">
   <img src="banner.png" width="700">
