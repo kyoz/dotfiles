@@ -1,6 +1,8 @@
 # Kyoz's dotfiles
 dotfiles to configurating my working enviroment (OSX) :cat:
 
+:warning: for linux version, please checkout [linux branch](https://github.com/kyoz/dotfiles/tree/linux)
+
 <p align="center">
   <img src="banner.png" width="700">
 </p>
